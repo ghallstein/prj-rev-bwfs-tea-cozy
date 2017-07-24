@@ -1,0 +1,143 @@
+body {
+  font-family: Helvetica;
+  font-size: 22px;
+  color: seashell;
+  background-color: black;
+  opacity: 0.9;
+  text-align: center;
+  margin: 0;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+}
+ div {
+   display: block;
+ }
+
+/*flex container to reduce redunant css; must remember to set the flex directions*/
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h2, h3, h4{
+  margin: 0;
+  padding: 10px;
+}
+
+/* header fixed to top */
+
+header {
+  flex-direction: row;
+  width: 100%;
+  position: fixed;
+  height: 69px;
+  border-bottom: 1px solid seashell;
+  background-color: black;
+  z-index: 1; /*keep header above content*/
+  align-items: center; /* this centered the text horizontally */
+  top: 0; /*remove the space between the header and the top */
+  right: 0; /*remove the space between the header and body*/
+}
+
+.logo img {
+  height: 50px;
+  padding-left: 10px;
+}
+
+nav {
+  text-align: right;
+  display: block;
+  flex-grow: 1;
+}
+nav span {
+  padding: 10px;
+}
+
+/* content */
+.content {
+  padding-top: 69px;
+  opacity: 0.9;
+  width: 1200px;
+  margin: auto;
+}
+
+/* mission */
+
+#mission {
+  background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-mission-background.jpg);
+  height: 700px;
+  padding-top: 70px;/* header is 69px + 1px bottom border */
+  width: 100%;
+}
+#mission .text-content {
+  width: 100%;
+  background-color: black;
+  margin: auto;/*flex-container magic */
+}
+
+/* store */
+
+#store {
+  width: 1000px;
+  padding-top: 70px;
+  margin: auto;
+  height: 700px;
+}
+
+.teas {
+
+}
+
+.tea {
+  display: block;
+  padding: 5px;
+}
+.tea img {
+  height: 200px;
+  width: 300px;
+  margin: 10px;
+}
+
+.tea span {
+  display: block; /*this will put the span right under the image*/
+  font-weight: bold;
+}
+
+
+/* locations */
+#locations {
+  background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-locations-background.jpg);
+  width: 100%;
+  height: 500px;
+  padding:0;
+  padding-top: 70px;
+}
+
+.locations {
+}
+
+.location {
+  background-color: black;
+  width: 300px;
+  opacity: 1;
+  margin: 5px 20px;/*h4 has padding of 10, so this will make it 15*/
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* footer */
+
+footer {
+  text-align: left;
+  padding-left: 20px;
+}
+a[href^="tel"]{
+    color:inherit;
+    text-decoration:none;
+}
